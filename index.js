@@ -6,17 +6,17 @@ connectToMongo();
 const port = 5000 || process.env.PORT;
 var cors = require("cors");
 
-app.use(cors({
-  origin: process.env.FRONTEND_API_LINK
-}));
+// app.use(cors({
+//   origin: process.env.FRONTEND_API_LINK
+// }));
 
-// app.use(
-//   cors({
-//     origin: [process.env.FRONTEND_URL],
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: "https://collage-managements-system.web.app/",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 app.get('/', (req,res)=>{
   res.send("Hi, This is cms home page")
