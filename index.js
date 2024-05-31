@@ -10,6 +10,13 @@ app.use(cors({
   origin: process.env.FRONTEND_API_LINK
 }));
 
+// app.use(
+//   cors({
+//     origin: [process.env.FRONTEND_URL],
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     credentials: true,
+//   })
+// );
 
 app.get('/', (req,res)=>{
   res.send("Hi, This is cms home page")
