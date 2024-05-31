@@ -12,7 +12,7 @@ var cors = require("cors");
 
 app.use(
   cors({
-    origin: "https://collage-managements-system.web.app/",
+    origin: "https://collage-managements-system.web.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
